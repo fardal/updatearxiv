@@ -1,6 +1,6 @@
 # updatearxiv
 
-updatearxiv.py is a quick and dirty Python script to update stored PDF files from arXiv to their current versions: published, if available, or updated arxiv version, if it exists.  It demonstrates use of the APIs for both ADS and arXiv.  Valid ADS account with API token required (it's easy to set up).  
+updatearxiv.py is a quick and dirty Python script to update stored PDF files from arXiv to their current versions: published, if available, or updated arxiv version, if it exists.  It demonstrates use of the APIs for both ADS and arXiv.  Valid ADS account with API token required (it's easy to set up).  There are probably other tools to do this, I wrote it mostly for my own education.
 
 A much simpler script, checkarxiv.py, pulls up the ADS web page corresponding to a single arXiv filename, which will show whether the paper is published, but doesn't update anything.  This doesn't require an ADS token.  
 
@@ -10,7 +10,7 @@ When I look at the daily arXiv summary I sometimes say "hm, that could be intere
 
 ### Installing
 
-Usage requires an ADS account and corresponding API access token.  See instructions on the ADS site in the Account menu, "Customize Settings" for how to generate the token.  Edit the script updatearxiv.py to contain your ADS account name.  Then see https://pypi.org/project/keyring/#configure-your-keyring-lib for how to enter this in keyring.  Or just enter the token in the script, if you don't care about keeping it secret.
+Usage requires an ADS account and corresponding API access token.  See instructions on the ADS site in the Account menu, "Customize Settings" for how to generate the token.  Edit the script updatearxiv.py to contain your ADS account name.  Then see https://pypi.org/project/keyring/#command-line-utility for how to enter this in keyring.  Or just enter the token in the script, if you don't care about keeping it secret.
 
 For command-line usage: stick the script updatearxiv.py somewhere in your path, then say python -B -m updatearxiv [DIRECTORY-OR-PDFFILENAME] [DIRECTORY-OR-PDFFILENAE]...  But if you want to make it a drag and drop app on Mac OS, as I did, see AUTOMATOR.txt.
 
@@ -22,5 +22,5 @@ This only works on files saved with the default arxiv filenames such as 1812.123
 
 ### Requirements
 
-Python modules requests, keyring.  On my system I need a customized Python installation rather than the system default.  Also requires the ADS account/token.
+Python modules requests, keyring.  On my system I thus need a customized Python installation rather than the system default.  Also requires the ADS account/token.
 
