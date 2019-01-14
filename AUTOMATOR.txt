@@ -1,0 +1,12 @@
+
+# Turning script into an app
+
+To make this a drag-and-drop app on Mac OS X: 
+
+Open /Applications/Automator.  Choose "Run Shell Script".  Set shell to /bin/bash.  Set "Pass input:" menu to "as arguments".  Enter the script below in the text box.  Replace /Users/myname/scriptlocation below with the directory where you saved the script.  Replace /Users/myname/anaconda/envs/myenv/bin/python with a python executable that has the required modules.  Save to a convenient location.  Then you can drag files or folders onto the app's icon and it will update the arXiv PDFs you dragged.
+
+#!/bin/sh
+
+cd /Users/myname/scriptlocation
+/Users/myname/anaconda/envs/myenv/bin/python -B updatearxiv.py "$@"
+
